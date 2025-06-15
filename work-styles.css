@@ -1,0 +1,197 @@
+/* ===== GLOBAL ===== */
+html, body {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #f4f1ec;
+  color: #000;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ===== NAVIGATION ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #e8e2d6;
+  height: 64px;
+  padding: 0 2rem;
+  border-bottom: 2px solid white;
+}
+
+.logo {
+  font-family: 'La Belle Aurore', cursive;
+  font-size: 1.8rem;
+  margin-top: auto;
+}
+
+.nav {
+  display: flex;
+  height: 100%;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #d6cebe;
+  color: white;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid black;
+}
+
+/*=====CONTENT SECTION=====*/
+.graphic-section {
+  background-color: #fdf7f2;
+  padding: 2rem 2rem 4rem 2rem;
+}
+
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-left: 8%;
+  margin-bottom: 2rem;
+}
+
+.design-card {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  margin-bottom: 2.5rem;
+}
+
+.design-image {
+  width: 100%;
+  display: block;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  padding: 10px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 12px;
+}
+
+.design-label {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: white;
+  padding: 0.4rem 1.2rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  pointer-events: none;
+}
+
+.design-card:hover {
+  transform: scale(1.02);
+}
+
+.design-card:hover .design-image {
+  opacity: 1;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Small screens: phones */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.2rem;
+    margin-left: 5%;
+    margin-bottom: 1.5rem;
+  }
+
+  .design-card {
+    max-width: 90%;
+    margin: 0 auto 2rem auto;
+    border-radius: 10px;
+  }
+
+  .design-image {
+    padding: 6px;
+    border-radius: 10px;
+  }
+
+  .design-label {
+    font-size: 0.75rem;
+    padding: 0.3rem 1rem;
+    bottom: 12px;
+    left: 12px;
+  }
+
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav a {
+    padding: 0.75rem;
+  }
+}
+
+/* Medium screens: tablets */
+@media (max-width: 900px) {
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .design-label {
+    font-size: 0.85rem;
+  }
+
+  .design-card {
+    max-width: 95%;
+  }
+}
+
+a .design-label,
+a:visited .design-label,
+a:hover .design-label,
+a:active .design-label {
+  color: black;
+}

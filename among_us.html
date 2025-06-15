@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work | Resumate</title>
+  <link rel="stylesheet" href="work-detail.css" />
+  <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">JC</div>
+    <nav class="nav">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#work" class="nav-link active">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="work-detail-layout">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="resumate.html">Figma AI Portfolio Builder</a></li>
+        <li class="active">Website: Among Us Chatbot</li>
+        <li><a href="sky.html">Website: Sky - Children of the Light</a></li>
+        <li><a href="game.html">Game Trailer</a></li>
+      </ul>
+    </aside>
+
+    <section class="project-display">
+      <div class="project-image-block row">
+        <img src="portfolio website images/among us_1.webp" alt="Theory of Space">
+        <p class="description">
+            This interactive chatbot-style page was built to simulate a conversation with the site’s developer, providing users with insights into the website’s structure, styling, and functionality. It serves as both a developer diary and an educational tool, styled to fit seamlessly within the Among Us aesthetic.
+        </p>
+      </div>
+
+      <div class="project-image-block row">
+        <img src="portfolio website images/among us_2.webp" alt="Animation Experiments">
+        <p class="description">
+            The UI was styled to resemble a messaging interface using custom CSS for rounded buttons, gradient backgrounds, and a modular layout. The visual design aligns with the rest of the site by using the Among Us-inspired color palette, typography, and avatar art, creating a consistent user experience.
+        </p>
+      </div>
+
+      <div class="project-image-block row">
+        <img src="portfolio website images/among us_3.webp" alt="Post Production">
+        <p class="description">
+            Each question button on the left is hard-coded with an event listener in JavaScript. When clicked, the corresponding answer text is dynamically injected into the right-hand dialogue box using innerHTML. This modular structure made it easy to update or expand the number of questions without rewriting core logic.
+        </p>
+      </div>
+
+      <div class="project-image-block row">
+        <img src="portfolio website images/among us_4.webp" alt="Sound design">
+        <p class="description">
+            The Javascript logic handles active states and question tracking using conditional statements and class toggling. It ensures that only one message is visible at a time, mimicking a clean chatbot reply flow without relying on external libraries or back-end frameworks.
+        </p>
+      </div>
+
+      <div class="project-image-block row">
+        <img src="portfolio website images/among us_5.webp" alt="Research">
+        <p class="description">
+            All elements were coded using semantic HTML and styled with scalable rem units and flexbox. This allows the chatbot interface to remain fully functional and readable across desktop and mobile viewports. Button focus states and hover effects were also added for accessibility and visual feedback.
+        </p>
+      </div> 
+    </section>
+  </main>
+
+</body>
+</html>

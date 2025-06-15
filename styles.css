@@ -1,0 +1,409 @@
+/* ===== GLOBAL ===== */
+html, body {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #f4f1ec;
+  color: #000;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ===== NAVIGATION ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #e8e2d6;
+  height: 64px;
+  padding: 0 2rem;
+  border-bottom: 2px solid white;
+}
+
+.logo {
+  font-family: 'La Belle Aurore', cursive;
+  font-size: 1.8rem;
+  margin-top: auto;
+}
+
+.nav {
+  display: flex;
+  height: 100%;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #d6cebe;
+  color: white;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid black;
+}
+
+/* ===== HOME SECTION ===== */
+#home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section{
+  background: url('Assets/hero-background.webp') center center / cover no-repeat;
+  scroll-snap-align: start;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.hero-content h1 em {
+  font-style: italic;
+}
+
+.portfolio-label {
+  font-family: 'Inter', sans-serif;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+}
+
+.scroll-btn-img {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-image: url('Assets/Arrow-circle-default.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  transition: background-image 0.3s ease;
+}
+
+.scroll-btn-img:hover {
+  background-image: url('Assets/Arrow-circle-hover.png');
+}
+
+/* ===== WORK SECTION ===== */
+#work {
+  padding: 4rem 2rem;
+  background-color: #f4f1ec;
+}
+
+.work-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-top:2.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  max-width: 1200px;
+  margin-left: 8%;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  transform: scale(0.95);
+  transform-origin: top center;
+}
+
+.work-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.work-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.work-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+  transition: opacity 0.3s ease;
+}
+
+.work-item:hover img {
+  opacity: 1;
+}
+
+.work-item:visited span {
+  color: black;
+}
+
+.graphic-design {
+  grid-row: span 2;
+}
+
+.work-card.tall {
+  grid-row: span 2;
+}
+
+.work-inner {
+  width: 100%;
+  height: 100%;
+  border: 12px solid white;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+  transition: opacity 0.3s ease;
+  display: block;
+}
+
+.work-item:hover .work-inner img {
+  opacity: 1;
+}
+
+.work-inner span {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  background: white;
+  padding: 0.4rem 1.2rem;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: black;
+}
+
+.work-item:visited span,
+.work-item:hover span,
+.work-item:active span {
+  color: black;
+}
+
+/* ===== ABOUT SECTION REFINED ===== */
+#about {
+  padding: 6rem 2rem;
+  background: url('Assets/hero-background.webp') center top / 100% auto no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+  padding-top: 9vh;
+  padding-bottom: 1vh;
+}
+
+.about-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  text-align: right;
+  font-style: italic;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.about-circles {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: #bcb6ad;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.circle.fade-in {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.large-circle {
+  width: 60px;
+  height: 60px;
+}
+
+.small-circle {
+  width: 20px;
+  height: 20px;
+}
+
+
+.about-text {
+  flex: 3;
+  font-family: 'Inter', sans-serif;
+}
+
+.about-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.about-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ===== CONTACT SECTION ===== */
+#contact {
+  background: url('Assets/hero-background.webp') center center / cover no-repeat;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 0 2rem;
+}
+
+
+.contact-container {
+  margin-left: 8%;
+  max-width: 600px;
+  color: #000;
+}
+
+.contact-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 2rem;
+}
+
+.contact-intro {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.contact-footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact-container {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .nav a {
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+}
+
